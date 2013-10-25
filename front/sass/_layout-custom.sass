@@ -782,21 +782,21 @@ header
 
 		.property_detail
 			background-color: #ffffff
-			padding-bottom: 150px
+			padding-bottom: 30px
 			.infotext-detail
 				padding: 0px 20px
-				h3
-					font-size: 18px
-					font-weight: 200
-					padding-bottom: 15px
-					padding-top: 30px
-					text-transform: uppercase
+				margin-top: 30px
+				h1
+					+fontTitle
 				span.price
-					font-size: 18px
-					color: #333333
+					font-size: 30px
+					color: $branco
+					padding: 20px 30px
+					display: block
+					background: $vermelho
+					margin-bottom: 30px
 				.title-info
 					padding: 0px
-					margin-top: 50px
 					li
 						margin-bottom: 10px
 						padding-bottom: 10px
@@ -806,10 +806,44 @@ header
 						span
 							float: right
 				.share
-					margin-top: 80px
+					margin-top: 30px
 					ul li
 						display: inline-block
 						margin-right: 8px
+				.box
+					padding: 10px 0 30px 0
+					+clearfix
+
+					.list
+						li
+							padding-left: 15px
+							background: url(../img/icon/next1.png) center left no-repeat
+							font-size: 12px
+							margin-bottom: 5px
+					&.quartos
+						display: block
+						a
+							background: $brancoCinza
+							padding: 20px
+							border-top: 1px solid rgba($preto, 0.1)
+							display: block
+							img
+								display: block
+								width: 150px
+								float: left
+								margin-right: 20px
+							h5
+								margin-bottom: 5px
+							p
+								font-size: 12px
+
+							&:hover
+								background: $vermelho
+								p
+									color: $branco
+								h5
+									color: $branco
+
 			.flex-direction-nav .flex-disabled
 				opacity: .3!important
 				filter: alpha(opacity = 30)
@@ -820,7 +854,7 @@ header
 					a
 						width: 29px
 						height: 55px
-						margin: -27px 5% 0 3%
+						margin: -28px 0
 						display: block
 						background: url('../img/icon/pre-dt.jpg') no-repeat 0 0
 						position: absolute
@@ -833,13 +867,13 @@ header
 					.flex-next
 						background: url('../img/icon/next-dt.jpg') no-repeat 0 0
 						background-position: 100% 0
-						right: 7%
+						right: 10px
 						&:hover
 							background: url('../img/icon/next-dt-hv.png') no-repeat 0 0
 					.flex-prev
 						&:hover
-							background: url('../img/icon/pre-dt-hv.png') no-repeat 0 0
-						left: 0px
+							background: url('../img/icon/pre-dt-hv.jpg') no-repeat 0 0
+						left: 10px
 				.flexslider:hover
 					.flex-next
 						opacity: 0.8
@@ -864,12 +898,13 @@ header
 					box-shadow: none
 					margin-bottom: 20px
 					margin: 0 auto
-					padding: 0 115px 0 60px
+					padding: 0 40px 0 50px
 					position: relative
 					.flex-direction-nav a
 						opacity: inherit
 					img
 						height: 55px
+						cursor: pointer
 					.slides > li
 						margin-right: 10px
 			#pic-detail.flexslider
