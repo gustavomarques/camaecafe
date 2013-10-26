@@ -783,6 +783,7 @@ header
 		.property_detail
 			background-color: #ffffff
 			padding-bottom: 30px
+			+clearfix
 			.infotext-detail
 				padding: 0px 20px
 				margin-top: 30px
@@ -810,6 +811,41 @@ header
 					ul li
 						display: inline-block
 						margin-right: 8px
+				.map
+					margin-bottom: 40px
+
+				.termos
+					display: block
+					width: 94%
+					border: 1px solid $cinzaMuitoClaro
+					padding: 3%
+					height: 200px
+					+clearfix
+					overflow: scroll
+					margin-top: 30px
+					float: left
+
+				#concordo
+					display: block
+					float: left
+					width: 100%
+					padding: 5px
+					+border-radius(5px)
+					background: $brancoCinza 
+					color: $vermelho
+					margin-top: 20px
+
+					input[type="radio"], label
+						display: block
+						float: left
+						width: auto
+						height: 20px
+						padding: 0
+						margin: 0 7px
+						font-size: 12px
+						text-transform: uppercase
+
+
 				.box
 					padding: 10px 0 30px 0
 					+clearfix
@@ -843,6 +879,74 @@ header
 									color: $branco
 								h5
 									color: $branco
+					&.reserva
+						.inputWrapper
+							height: 90px
+							display: block
+							float: left
+							width: 48%
+							+clearfix
+
+							&:nth-child(2n+1)
+								margin-right: 2%
+
+							&:nth-child(2n+2)
+								margin-left: 2%
+
+							.preco
+								font-size: 24px
+								padding: 10px 20px
+								line-height: 20px
+								display: block
+								text-align: center
+								color: $preto
+								background: $brancoCinza
+
+						input[type="submit"], input[type="button"]
+							margin-top: 20px
+							height: 50px
+							+button3d
+
+						input, select
+							border: 1px solid #e5e5e5
+							box-shadow: none
+							border-radius: 0
+							width: 100%
+							height: 40px
+							+box-sizing(border-box)
+							&:focus
+								border-color: $vermelho
+								box-shadow: none
+						textarea
+							border: 1px solid #e5e5e5
+							box-shadow: none
+							border-radius: 0
+							width: 100%
+							+box-sizing(border-box)
+							&:focus
+								border-color: $vermelho
+								box-shadow: none
+						label
+							color: #333333
+							font-size: 11px
+							font-weight: 700
+							padding: 10px 0 5px 0
+						.button-send
+							color: #ffffff
+							padding: 10px 60px
+							background-color: $vermelho
+							border: none
+							text-transform: uppercase
+							margin-top: 20px
+							&:hover
+								background-color: #333333
+
+			&.reservaContainer
+				.reserva
+
+
+
+
 
 			.flex-direction-nav .flex-disabled
 				opacity: .3!important
@@ -912,6 +1016,7 @@ header
 				border: none
 				box-shadow: none
 				margin-bottom: 20px
+		
 		.blog_list
 			&.full-width2col ul li.span6.first
 				clear: both
