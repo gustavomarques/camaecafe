@@ -511,7 +511,6 @@ header
 					bottom: 10px
 					filter: alpha(opacity = 90)
 					padding: 15px 20px
-					font-weight: 14px
 				img
 					-webkit-transition: all 900ms ease-out
 					-moz-transition: all 900ms ease-out
@@ -902,6 +901,14 @@ header
 								color: $preto
 								background: $brancoCinza
 
+							&.small
+								width: 32%
+								margin: 0
+
+								&:nth-child(2n+2)
+									margin-left: 2%
+									margin-right: 2%
+
 						input[type="submit"], input[type="button"]
 							margin-top: 20px
 							height: 50px
@@ -940,12 +947,6 @@ header
 							margin-top: 20px
 							&:hover
 								background-color: #333333
-
-			&.reservaContainer
-				.reserva
-
-
-
 
 
 			.flex-direction-nav .flex-disabled
@@ -1193,26 +1194,6 @@ header
 					margin-top: 20px
 					&:hover
 						background-color: #333333
-		.error404
-			text-align: center
-			padding-bottom: 120px
-			h1
-				font-size: 240px
-				margin: 120px 0px 110px 0
-			p
-				font-size: 18px
-				text-transform: uppercase
-				color: #999999
-			a
-				display: inline-block
-				background-color: $vermelho
-				border: none
-				margin-top: 20px
-				color: #ffffff
-				padding: 10px 15px
-				font-size: 12px
-				&:hover
-					background-color: #333333
 		.ouragents
 			h1
 				font-size: 36px
@@ -1557,4 +1538,131 @@ header
 	text-indent: -9999px
 	&:hover
 		background-image: url('../img/icon/backtotophv.png')
+
+
+#cboxOverlay
+	cursor: pointer
+	visibility: visible
+	background: rgba($black, 0.9)
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	position: fixed
+	z-index: 99998
+
+#colorbox
+	z-index: 99999
+	border: 3px solid rgba($vermelho, 0.9)
+	margin-top: -130px
+	padding: 30px
+	padding-bottom: 130px
+	background: $branco
+
+	&:focus
+		border: none
+
+	#cboxTitle, #cboxCurrent
+		width: 100%
+		color: $preto
+
+	button
+		margin: 3%
+		width: 27%
+
+
+
+body
+	.daterangepicker
+		.calendar
+			+clearfix
+			max-width: none
+		.ranges
+			width: 190px
+			.btn.btn-small
+				width: 187px
+				display: block
+				margin-bottom: -5px
+				&.btn-success
+					+button3d
+					font-size: 13px
+		td.active
+			&, &:hover
+				background: $vermelho
+
+.carrinho
+	width: 100%
+	background: $branco
+	td, th
+		padding: 10px
+		border: 1px solid $vermelhoEscuro
+	th
+		color: $branco
+		font-size: 15px
+	thead
+		background: $vermelho
+		+border-radius(10px 10px 0 0)
+
+.carrinhoTotal
+	& > div
+		background: $branco
+		+border-radius(0 0 10px 10px)
+		padding: 20px
+		margin-bottom: 20px
+		+clearfix
+		border: 1px solid $vermelhoEscuro
+		border-top: 0
+		span
+			display: block
+			float: left
+			font-size: 18px
+
+			&.preco
+				font-size: 30px
+				font-weight: 800
+				color: $vermelho
+				float: right
+	a.btn3d
+		display: block
+		float: right
+		height: 40px
+		font-size: 16px
+		line-height: 38px
+		&:hover
+			color: $branco
+			
+		&.btCinza
+			float: left
+			&:hover
+				color: $black
+
+
+
+
+
+.error404, .confirmacao
+	text-align: center
+	padding-bottom: 40px
+	h1
+		font-size: 200px
+		margin: 0
+		text-align: center
+	p
+		font-size: 18px
+		text-transform: uppercase
+		color: #999999
+	a
+		display: inline-block
+		background-color: $vermelho
+		border: none
+		margin-top: 20px
+		color: #ffffff
+		padding: 10px 20px
+		font-size: 14px
+		&:hover
+			background-color: #333333
+
+
+
+
 

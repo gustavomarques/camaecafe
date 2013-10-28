@@ -13,6 +13,12 @@
 	<link href="css/tabber/tabber.css" rel="stylesheet" media="screen">
 	<link href="css/style.css" rel="stylesheet" media="screen">
 	<link href="css/responsive.css" rel="stylesheet" media="screen">
+
+
+	<!-- Styles + Scripts (in bottom page) for date picker range!-->
+	<link href="css/daterangepicker-bs3.css" rel="stylesheet" media="screen">
+
+
 	<!-- HTML5 shim, for Ie6-8 support of HTML5 elements -->
 		<!--[if lt Ie 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -211,15 +217,11 @@
 							<div class="box reserva">
 								<h3>Gostou? Faça já sua pré-reserva!</h3>
 								<form>
-									<div class="inputWrapper">
-										<label>Data de entrada</label>
-										<input type="text">
+									<div class="inputWrapper small">
+										<label for="dataReserva">Data da reserva</label>
+										<input type="text" name="dataReserva" id="dataReserva" value="" /> 
 									</div>
-									<div class="inputWrapper">
-										<label>Data de saida</label>
-										<input type="text">
-									</div>
-									<div class="inputWrapper">
+									<div class="inputWrapper small">
 										<label>quantidade de hóspedes</label>
 										<select>
 											<option>1</option>
@@ -228,9 +230,9 @@
 											<option>4+</option>
 										</select>
 									</div>
-									<div class="inputWrapper">
-										<label>preço</label>
-										<span class="preco">200,00</span>
+									<div class="inputWrapper small">
+										<label>Valor total</label>
+										<span class="preco">800,00</span>
 									</div>
 									<input type="button" name="" value="Fazer pré-reserva" onClick="location.href='pre-reserva.html'">
 								</form>
@@ -387,6 +389,17 @@
 <script type="text/javascript" src="js/tabber/tabber.js"></script>
 <!-- Load template main javascript file -->
 <script type="text/javascript" src="js/main.js"></script>
+
+
+<!-- ================ Pre-reserva page only scripts ============ -->
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/daterangepicker.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#dataReserva').daterangepicker();
+	});
+</script>
 
 <!-- ================ Property-detail page only scripts ============ -->
 <script src="js/flexflider/jquery.flexslider-min.js"></script>

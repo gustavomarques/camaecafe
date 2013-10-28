@@ -138,5 +138,11 @@ $corBotao: $vermelho
 		+box-shadow(rgba($black, 0.3) 0 -5px 0 inset)
 		opacity: 1
 
-input[type="submit"], button
+input[type="submit"], input[type="button"], button, .btn3d
 	+button3d
+	&.btCinza
+		$textoBotao: $preto
+		$corBotao: $cinzaMuitoClaro
+		+button3d
+
+
