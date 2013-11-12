@@ -25,7 +25,20 @@ header
 			top: 0px
 			z-index: 9999
 		.menu-navbar
-			margin-left: 265px
+			padding-left: 260px
+			width: 680px
+
+			.navbar, .nav
+				position: relative
+				+clearfix
+				overflow: visible
+				width: 100%
+				+box-sizing(border-box)
+
+			#navmenu
+				padding-right: 50px
+				margin: 0
+
 			.navbar .nav > li
 				line-height: 20px
 				>
@@ -46,9 +59,12 @@ header
 							&:hover
 								background-image: url('../img/icon/homehv.png')
 						&:focus, &:hover
-							color: #ffffff
+							color: $brancoCinza
 							text-decoration: none
 							background-color: $vermelho
+							& > span
+								color: $brancoCinza
+
 					.dropdown-menu
 						&:after, &:before, li:last-child
 							border: none
@@ -77,6 +93,38 @@ header
 					background-color: #ffffff
 					box-shadow: none
 					color: $vermelho
+
+				&.carrinhoBt
+					position: absolute
+					right: 0
+					z-index: 98
+					& *
+						+transition
+
+					& > a
+						width: 0
+						height: 20px
+						overflow: hidden
+						padding-left: 65px
+						padding-right: 0
+						background: transparent url(../img/icon/cart.png) 22px center no-repeat
+						display: block
+						border-right: 1px solid #f0f0f0
+						span
+							display: block
+							width: 100%
+							text-align: center
+							opacity: 0
+
+						&:hover
+							padding-left: 25px
+							background: $vermelho url(../img/icon/cart-hv.png) 15px center no-repeat
+							width: 250px
+							span
+								opacity: 1
+
+
+
 			> .active > a
 				background-color: #ffffff
 				box-shadow: none
@@ -755,6 +803,96 @@ header
 			h1
 				font-size: 26px
 
+			&.carrinho-sidebar
+				+transition
+				+clearfix
+				position: relative
+
+				h1
+					margin-bottom: 0
+					cursor: pointer
+
+				& section
+					display: none
+					ul
+						.item
+							+clearfix
+							margin-top: 25px
+
+							p
+								margin-bottom: 5px
+								position: relative
+								line-height: 120%
+								display: block
+								float: left
+								width: 30%
+								font-size: 10px
+								text-align: center
+								color: $cinzaClaro
+								
+								b
+									display: block
+									float: none
+									margin-top: 5px
+									color: $cinzaClaro
+
+								&:nth-child(3)
+									margin-left: 5%
+									margin-right: 5%
+
+								&.line
+									padding: 5px 0
+									display: block
+									width: 260px
+									text-align: left
+									font-size: 14px
+									margin: 0
+									background: none
+									color: #111
+
+									&.nome
+										font-size: 16px
+										font-weight: bold
+
+									&.price
+										padding: 10px
+										padding-right: 70px
+										width: 180px
+										background: $brancoCinza
+										b
+											position: absolute
+											top: 10px
+											right: 10px
+											margin: 0
+
+					& > .price
+						margin-top: 10px
+						padding-right: 80px
+						width: 180px
+						display: block
+						position: relative
+						font-size: 20px
+						font-weight: bold
+						text-transform: uppercase
+						+clearfix
+
+						b
+							position: absolute
+							top: 0
+							right: 0
+							color: $vermelho
+							margin: 0	
+					& > a
+						+button3d
+						background: $vermelho
+						color: $brancoCinza
+						padding: 10px
+						width: 260px
+						font-size: 13px
+						margin-top: 10px
+						display: block
+						line-height: auto
+
 			&.busca-sidebar
 				background: $vermelho
 				
@@ -834,7 +972,7 @@ header
 					color: $vermelho
 					margin-top: 20px
 
-					input[type="radio"], label
+					input[type="checkbox"], label
 						display: block
 						float: left
 						width: auto
@@ -885,6 +1023,9 @@ header
 							float: left
 							width: 48%
 							+clearfix
+							overflow: visible
+							height: auto
+							position: relative
 
 							&:nth-child(2n+1)
 								margin-right: 2%
@@ -924,6 +1065,8 @@ header
 							&:focus
 								border-color: $vermelho
 								box-shadow: none
+								outline: none
+
 						textarea
 							border: 1px solid #e5e5e5
 							box-shadow: none
@@ -1638,7 +1781,23 @@ body
 
 
 
+.included
+	li
+		color: $cinzaClaro
+		text-decoration: line-through
+		padding: 0 40px
+		background: url(../img/no-included.png) top left no-repeat
+		display: block
+		width: 50%
+		float: left
+		+box-sizing(border-box)
+		font-size: 14px
+		min-height: 50px
 
+		&.ok
+			background-image: url(../img/included.png)
+			color: $vermelho
+			text-decoration: none
 
 .error404, .confirmacao
 	text-align: center
@@ -1661,6 +1820,50 @@ body
 		font-size: 14px
 		&:hover
 			background-color: #333333
+
+form
+	position: relative
+
+	.parsley-error
+		background: rgba($vermelho, 0.2)
+		color: $cinzaEscuro
+		font-weight: bold
+
+	.parsley-success
+		background: rgba($verde, 0.2)
+		border-color: $verde
+		color: $cinzaEscuro
+		font-weight: bold
+
+	.parsley-error-list
+		display: block
+		position: absolute
+		top: 80px
+		background: $vermelho
+		color: $brancoCinza
+		overflow: visible
+		z-index: 99
+		&:after
+			content: ""
+			position: absolute
+			top: -20px
+			left: 10px
+			width: 0px
+			height: 0px
+			border-style: solid
+			border-width: 10px
+			border-color: transparent transparent $vermelho transparent
+			display: block
+
+		li
+			padding: 5px 10px
+			display: block
+			float: none
+			color: $brancoCinza
+			&:hover
+				background: $vermelhoEscuro
+
+
 
 
 
