@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Exo:100,500,800,100italic,500italic,800italic|Lobster+Two:400italic);
+@import url(http://fonts.googleapis.com/css?family=Sniglet);
 /* line 17, ../../../../../../.rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.0/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -86,7 +86,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   background-color: #d84949;
   cursor: pointer; }
 
-/* line 113, ../sass/_base.sass */
+/* line 111, ../sass/_base.sass */
 body {
   font-size: 14px;
   color: #414042;
@@ -94,13 +94,13 @@ body {
   font-weight: 500;
   line-height: 150%; }
 
-/* line 119, ../sass/_base.sass */
+/* line 117, ../sass/_base.sass */
 * {
   font-size: 12px;
   color: #414042;
   font-family: "Exo", "helvetica", "Trebuchet MS", "Arial", sans-serif;
   font-weight: 500; }
-  /* line 124, ../sass/_base.sass */
+  /* line 122, ../sass/_base.sass */
   * p {
     line-height: 150%;
     font-size: 14px;
@@ -108,12 +108,12 @@ body {
     font-family: "Exo", "helvetica", "Trebuchet MS", "Arial", sans-serif;
     font-weight: 300; }
 
-/* line 130, ../sass/_base.sass */
+/* line 128, ../sass/_base.sass */
 b {
   font-family: "Exo", "helvetica", "Trebuchet MS", "Arial", sans-serif;
   font-weight: 800; }
 
-/* line 133, ../sass/_base.sass */
+/* line 131, ../sass/_base.sass */
 a {
   text-decoration: none;
   -webkit-transition: all 0.2s;
@@ -124,12 +124,12 @@ a {
   color: #414042;
   font-family: "Exo", "helvetica", "Trebuchet MS", "Arial", sans-serif;
   font-weight: 500; }
-  /* line 139, ../sass/_base.sass */
+  /* line 137, ../sass/_base.sass */
   a:hover {
     color: #d84949;
     text-decoration: none; }
 
-/* line 144, ../sass/_base.sass */
+/* line 142, ../sass/_base.sass */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Exo", "helvetica", "Trebuchet MS", "Arial", sans-serif;
   font-weight: 100;
@@ -139,27 +139,27 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 110%;
   text-transform: uppercase; }
 
-/* line 152, ../sass/_base.sass */
+/* line 150, ../sass/_base.sass */
 h1 {
   font-size: 36px; }
 
-/* line 155, ../sass/_base.sass */
+/* line 153, ../sass/_base.sass */
 h2 {
   font-size: 30px; }
 
-/* line 158, ../sass/_base.sass */
+/* line 156, ../sass/_base.sass */
 h3 {
   font-size: 24px; }
 
-/* line 161, ../sass/_base.sass */
+/* line 159, ../sass/_base.sass */
 h4 {
   font-size: 20px; }
 
-/* line 164, ../sass/_base.sass */
+/* line 162, ../sass/_base.sass */
 h5 {
   font-size: 18px; }
 
-/* line 167, ../sass/_base.sass */
+/* line 165, ../sass/_base.sass */
 h6 {
   font-size: 14px; }
 
@@ -3052,9 +3052,8 @@ header .slider-home {
       padding: 15px 30px;
       background: rgba(0, 0, 0, 0.7);
       line-height: 70px;
-      font-family: "Lobster Two", cursive;
+      font-family: "Sniglet", cursive;
       font-size: 50px;
-      font-style: italic;
       text-transform: none; }
   /* line 217, ../sass/_layout-custom.sass */
   header .slider-home .flex-direction-nav {
@@ -3481,9 +3480,8 @@ header .slider-home {
         .main-content ul.products > li .product-item h3 a {
           color: #333333;
           font-weight: 200;
-          font-family: "Lobster Two", cursive;
+          font-family: "Sniglet", cursive;
           font-size: 24px;
-          font-style: italic;
           text-transform: none; }
           /* line 579, ../sass/_layout-custom.sass */
           .main-content ul.products > li .product-item h3 a:hover {
@@ -3947,9 +3945,8 @@ header .slider-home {
         margin-top: 30px; }
         /* line 927, ../sass/_layout-custom.sass */
         .main-content .grid_full_width .property_detail .infotext-detail h1 {
-          font-family: "Lobster Two", cursive;
+          font-family: "Sniglet", cursive;
           font-size: 50px;
-          font-style: italic;
           text-transform: none; }
         /* line 929, ../sass/_layout-custom.sass */
         .main-content .grid_full_width .property_detail .infotext-detail span.price {
